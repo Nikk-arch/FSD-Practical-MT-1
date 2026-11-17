@@ -1,0 +1,75 @@
+{
+  "info": {
+    "name": "MT1-LABEXAM Food Ordering API",
+    "description": "Requests for the Express REST API running at localhost:4000.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - All Foods",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:4000/foods"
+      }
+    },
+    {
+      "name": "GET - Food by ID",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:4000/foods/1"
+      }
+    },
+    {
+      "name": "POST - Add Food",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 4,\n  \"foodName\": \"Cold Coffee\",\n  \"category\": \"Beverage\",\n  \"price\": 120,\n  \"availability\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:4000/foods"
+      }
+    },
+    {
+      "name": "PUT - Update Food ID 1",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1,\n  \"foodName\": \"Margherita Pizza\",\n  \"category\": \"Fast Food\",\n  \"price\": 280,\n  \"availability\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:4000/foods/1"
+      }
+    },
+    {
+      "name": "DELETE - Food ID 1",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:4000/foods/1"
+      }
+    }
+  ],
+  "variable": []
+}
